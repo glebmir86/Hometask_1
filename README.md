@@ -1,5 +1,5 @@
 The task:
-Task 1: Based on requirements create 3 manual test cases
+**Task 1: Based on requirements create 3 manual test cases**
  
 
 Test case ID: REG_001
