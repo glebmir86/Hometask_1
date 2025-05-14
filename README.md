@@ -1,9 +1,9 @@
-The task:
-**Task 1: Based on requirements create 3 manual test cases**
- 
 
-Test case ID: REG_001
-Test name: Happy path – user registration with all fields filled    correctly.
+Task 1: Based on requirements create 3 manual test cases
+ 
+-----------------------------TestCase 1------------------------
+
+Name: Happy path – user registration with all fields filled    correctly.
 
 Precondition: 
 1. User is on registraion form - https://auth-home-task.vercel.app/register
@@ -23,10 +23,9 @@ Expected result:
 1. User redirected to Home page
 2. Message “You have registered successfully!” appears
 
+-----------------------------TestCase 2------------------------
 
-
-Test case ID: REG_002
-Test name: Check that all mandatory fields are mandatory
+Name: Check that all mandatory fields are mandatory
 
 Precondition: 
 1. User is on registraion form - https://auth-home-task.vercel.app/register
@@ -49,9 +48,9 @@ Expected result:
 1. Validation error appears under empty field
 2. User Registration is blocked 
 
+-----------------------------TestCase 3------------------------
 
-Test case ID: REG_003
-Test name: Check field validation rules
+Name: Check field validation rules
 
 Precondition:
 1. User is on registraion form - https://auth-home-task.vercel.app/register
@@ -72,7 +71,7 @@ Expected result:
 
 Task 2: Report at least 1 Bug You have found during the testing 
 
-Bug ID: 001
+-----------------------------Bug Report 1------------------------
 Summary: Field with error is not highlighted
 Precondtion: User is on Registration form
 
@@ -88,7 +87,7 @@ Error message appears, but fields are not highlighted
 
 Priority: Medium (From my experience, final decision on priority is with BA or Delivery Manager)
 
-Bug ID: 002
+-----------------------------Bug Report 2------------------------
 Summary: Email field with invalid data has pop up error message
 Precondtion: User is on Registration form
 
@@ -105,41 +104,40 @@ Expected result:
 Actual result:
 Pop up appears with message: “Please enter an email address”
 
-There are no error messages for other fields. If we delete email and click “Enter”, then error message for other fields appear.
+There are no error messages for other fields with failed validation. If we delete email and click “Enter”, then error message for other fields appear.
 
 
 Priority: High
-Comments: Unfortunatelly, can not attach screenshots.
 
 Task 3: Based on requirements automate 1 manual test case using playwright 
+File location: tests/registrationForm.test.ts
+
 Task 4: Add points to improve form's UI/UX 
 
-Could implement password visibility toggle – to allow users to show / hide password inputs.
-Could implement placeholder text to show expected input format (e.g. John1990 for username) 
-Could disable the "Register" button until all fields are valid.
+1. Could implement password visibility toggle – to allow users to show / hide password inputs.
+2. Could implement placeholder text to show expected input format (e.g. John1990 for username) 
+3. Could disable the "Register" button until all fields are valid.
 
 
 Task 5: Anything You would improve/specify more in the existing requirements 
 
-Looks like "Registration Form Fields" and "Field Validation" sections contain same information. If appropriate, I would advice to combine them in one section. In additional, for larger forms, I would include if field is mandatory, or optional.
-Define maximum characters for password. Currently, I could create user with password length 750 characters.
-Recommend updating the password rule to include at least one special character. This improves password strength and aligns with common security best practices.
-Minor remark, would change “Submit” button to “Registration” button
-There is a tricky moment with email validation. Would like to clarify which email formats we intend to accept and which we do not. From experience, if we have customers worldwide, some customers may have email addresses with valid, but uncommon formats — allowed by their email providers — that our current validation might reject. 
+
+1. Looks like "Registration Form Fields" and "Field Validation" sections contain same    information. If appropriate, I would advice to combine them in one section. In additional, for larger forms, I would include if field is mandatory, or optional.
+2. Define maximum characters for password. Currently, I could create user with password length 750 characters.
+3. Recommend updating the password rule to include at least one special character. This improves password strength and aligns with common security best practices.
+4. Minor remark, would change “Submit” button to “Registration” button
+5. There is a tricky moment with email validation. Would like to clarify which email formats we intend to accept and which we do not. From experience, if we have customers worldwide, some customers may have email addresses with valid, but uncommon formats — allowed by their email providers — that our current validation might reject. 
  
 
 Task 6: What else can be tested? 
 
-Check that password is sent in API request body over HTTPS protocol
-Check how password is stored in DB. It should be in hash, not plain text.
-Check that you can log in with registered user.
-Check that you can not create 2 users with same email or username
-Check that registration form accepts different valid email formats. Like "email"@example.com   
 
+1. Check that password is sent in API request body over HTTPS protocol
+2. Check how password is stored in DB. It should be in hash, not plain text.
+3. Check that you can log in with registered user.
+4. Check that you can not create 2 users with same email or username
+5. Check that registration form accepts unusual valid email formats. Like "email"@example.com    
 
-Link to app:  https://auth-home-task.vercel.app/
-
-Save all answers in README file and send automated test code link to public git repository Add any other comments You have about home task 
 
 
 Registration page requirements
