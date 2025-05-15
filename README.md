@@ -1,5 +1,4 @@
-
-Task 1: Based on requirements create 3 manual test cases
+                    Task 1: Based on requirements create 3 manual test cases
  
 --------------------TestCase 1 - Happy Path: Successful User Registration--------------------
 
@@ -65,7 +64,7 @@ Expected result:
 
 
 
-Task 2: Report at least 1 Bug You have found during the testing 
+                    Task 2: Report at least 1 Bug You have found during the testing 
 
 ----------------------Bug Report 1 - Field with error is not highlighted-----------------------
 
@@ -104,7 +103,7 @@ Actual result:
 
 Priority: High
 
-Task 3: Based on requirements automate 1 manual test case using playwright 
+                    Task 3: Based on requirements automate 1 manual test case using playwright 
 
 The framework uses the Page Object Model to keep tests clean and maintainable
 1. basePage.ts: Has common methods reused across project
@@ -116,7 +115,7 @@ The framework uses the Page Object Model to keep tests clean and maintainable
 
 Test file location: tests/registrationForm.test.ts
 
-Task 4: Add points to improve form's UI/UX 
+                    Task 4: Add points to improve form's UI/UX 
 
 1. Implement password visibility toggle – to allow users to show / hide password inputs
 2. Add placeholder hints (e.g. John1990)
@@ -124,8 +123,7 @@ Task 4: Add points to improve form's UI/UX
 4. Add "Contact support" button. In case user has any issues with Registration
 
 
-Task 5: Anything You would improve/specify more in the existing requirements 
-
+                    Task 5: Anything You would improve/specify more in the existing requirements 
 
 1. Looks like "Registration Form Fields" and "Field Validation" sections contain same    information. If appropriate, would combine them in one section. In additional, for larger forms, would include if field is mandatory, or optional.
 2. Specify max password length (currently allows 750+ chars)
@@ -133,14 +131,14 @@ Task 5: Anything You would improve/specify more in the existing requirements
 4. Minor remark, rename “Submit” button to “Registration” for clarity
 5. Clarify accepted email formats. From experience, if we have customers worldwide, some customers may have email addresses with valid, but uncommon formats — allowed by their email providers — that our current validation might reject. 
  
-Task 6: What else can be tested? 
-
+                    Task 6: What else can be tested? 
 
 1. Ensure password is sent over HTTPS in API request body 
 2. Ensure password is stored in DB securely. It should be hashed, not plain text
 3. Verify login with registered credentials
 4. Ensure you can not create 2 users with same email or username
 5. Check that registration form accepts unusual valid email formats. Like "email"@example.com    
+
 
 
 
